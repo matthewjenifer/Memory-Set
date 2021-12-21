@@ -1,7 +1,7 @@
-/* *{
+*{
     border: 1px solid gold;
     
-} */
+}
 
 body {
 
@@ -147,6 +147,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    background-image: url("../images/SET.png");
     background-size: cover;
 }
 
