@@ -123,10 +123,12 @@ ul {
     /* border: 3px solid yellow; */
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     background-image: url("../images/SET.png");
     background-size: cover;
+    overflow: auto;
 }
 
 #score-space{
