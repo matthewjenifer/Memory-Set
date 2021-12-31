@@ -68,7 +68,7 @@ ul {
 }
 
 #left-bar {
-    border: 3px solid blue;
+    /* border: 3px solid blue; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,7 +107,7 @@ ul {
 }
 
 #card-arena {
-    border: 3px solid red;
+    /* border: 3px solid red; */
     background-image: url("../images/SET.png");
     background-size: cover;
     width: 75%;
@@ -163,7 +163,7 @@ ul {
 
 
 #memory-game {
-    border: 3px solid orange;
+    /* border: 3px solid orange; */
     display: flex;
     flex-wrap: wrap;
     height: 100%;
@@ -174,7 +174,8 @@ ul {
 
 
 .memory-card {
-    border: 1px solid lightblue;
+    border: 1px solid transparent;
+    margin-top: 15px;
     width: 20%;
     height: 1.33%;
     position: relative;
@@ -208,7 +209,7 @@ ul {
 }
 
 #row2 {
-    border: 3px solid rgb(63, 209, 50);
+    /* border: 3px solid rgb(63, 209, 50); */
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
