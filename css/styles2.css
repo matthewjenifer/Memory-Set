@@ -1,16 +1,17 @@
-*{
+/* *{
     border: 1px solid gold;
     
-}
+} */
 
 body {
-
+    height: 100vh;
     display: flex;
     flex-wrap: wrap;
     background-image: url("/images/joshua-hoehne-Sr-aIjkgMpE-unsplash.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 
 
 #nav-panel {
@@ -68,13 +69,13 @@ ul {
 }
 
 #left-bar {
-    /* border: 3px solid red; */
+    border: 3px solid blue;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: white;
     flex-direction: column;
-    width: 350px;
+    width: 25%;
     /* background-image: url("../images/backpattern.png");  */
     background-size: contain;
     background-position: center;
@@ -108,15 +109,20 @@ ul {
 }
 
 #card-arena {
-    border: 3px solid black;
+    border: 3px solid red;
     background-image: url("../images/SET.png");
     background-size: cover;
-    width: 100%;
+    width: 75%;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
 
+}
+
+#counter{
+    border: 3px solid green;
+    height: 260px;
+    width: 150px;
+    position: relative;
+    right: 730px;
 }
 
 #rule-space{
@@ -151,48 +157,75 @@ ul {
     background-size: cover;
 }
 
-.rulesheets{
+.ruleSheets{
     border: 3px solid #ffde59;
 }
 
-#row1 {
-    /* border: 3px solid orange; */
+
+.memory-card {
+    border: 1px solid lightblue;
+    width: 21%;
+    height: 21%;
+    margin: 5px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1);
+    transform-style: preserve-3d;
+}
+
+.memory-card:active {
+    transform: scale(.97)
+        /* transition: transform .2s; */
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+    position: absolute;
+    border-radius: 5px; 
+    /* background: #1C7CCC; */
+    /* backface-visibility: hidden; */
+}
+
+.front-face {
+    /* transform: rotateY(180deg); */
+}
+
+#memory-game {
+    border: 3px solid orange;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+/* #row2 {
+    border: 3px solid orange;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
-    height: 200px;
-    width: 70%;
+    height: 20px;
+    width: 20px;
 
-}
+} */
 
-#row2 {
-    /* border: 3px solid orange; */
+/* #row3 {
+    border: 3px solid orange;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    height: 200px;
-    width: 70%;
+    height: 20px;
+    width: 20px;
 
-}
+} */
 
-#row3 {
-    /* border: 3px solid orange; */
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 200px;
-    width: 70%;
-
-}
-
-.card{
-    cursor: pointer;
-}
-
-.card:hover {
-    transform: scale(1.5);
-    transition: 1s ease;
-}
 
 .timecontainer {
     display: flex;
