@@ -62,23 +62,62 @@ function flipCard(){
         firstCard = this;
         
         console.log({hasFlippedCard, firstCard})
+        console.log(this.dataset)
         
-    }else if (hasFlippedCard === true && hasFlippedSecondCard !== true){
+    } else if (hasFlippedCard === true && hasFlippedSecondCard !== true){
         //second click
         secondCard = this;
         hasFlippedSecondCard =  true;
-
+        
         console.log({hasFlippedSecondCard, secondCard})
-
+        console.log(this.dataset)
+        
     } else {
         thirdCard = this;
         hasFlippedThirdCard = true;
-
+        
         console.log({hasFlippedThirdCard, thirdCard})
+        console.log(this.dataset)
 
-        //are cards a set
+        checkForSet();
+        
         
     }  
+}
+
+function checkForSet() {
+    if (firstCard.dataset.framework === secondCard.dataset.framework && secondCard.dataset.framework === thirdCard.dataset.framework){
+        console.log('Set Found')
+        disableCards();
+        hasFlippedThirdCard = false;
+        hasFlippedSecondCard = false;
+        hasFlippedCard = false;
+        
+    } else {
+        console.log('Try Again')
+        unflipCards();
+        hasFlippedThirdCard = false;
+        hasFlippedSecondCard = false;
+        hasFlippedCard = false;
+    }
+    
+}
+
+function disableCards(){
+    firstCard.removeEventListener('click', flipCard);
+    secondCard.removeEventListener('click', flipCard);
+    thirdCard.removeEventListener('click', flipCard);
+    
+}
+
+function unflipCards(){
+    setTimeout(()=>{
+        firstCard.classList.remove('flip')
+        secondCard.classList.remove('flip')
+        thirdCard.classList.remove('flip')
+        
+    }, 1500);
+    
 }
 
 cards.forEach(card => card.addEventListener('click', flipCard))
