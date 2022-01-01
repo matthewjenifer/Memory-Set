@@ -48,8 +48,8 @@ startTimer = () => {
 const cards = document.querySelectorAll('.memory-card');
 
 let hasFlippedCard = false;
-let hasFlippedFirstCard = false;
 let hasFlippedSecondCard = false;
+let hasFlippedThirdCard = false;
 let firstCard, secondCard, thirdCard
 
 function flipCard(){
@@ -63,18 +63,22 @@ function flipCard(){
         
         console.log({hasFlippedCard, firstCard})
         
-    }else if (hasFlippedFirstCard === true && hasFlippedSecondCard !== true){
+    }else if (hasFlippedCard === true && hasFlippedSecondCard !== true){
         //second click
         secondCard = this;
         hasFlippedSecondCard =  true;
-        console.log({hasFlippedCard, secondCard})
-    } else if(hasFlippedSecondCard === true) {
-        thirdCard = this;
-        console.log({hasFlippedCard, thirdCard})
-    }
-        //are cards a set
 
-    
+        console.log({hasFlippedSecondCard, secondCard})
+
+    } else {
+        thirdCard = this;
+        hasFlippedThirdCard = true;
+
+        console.log({hasFlippedThirdCard, thirdCard})
+
+        //are cards a set
+        
+    }  
 }
 
 cards.forEach(card => card.addEventListener('click', flipCard))
