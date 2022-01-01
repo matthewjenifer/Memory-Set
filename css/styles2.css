@@ -12,8 +12,26 @@ body {
     background-repeat: no-repeat;
 }
 
-p{
+h2 {
     color: white;
+    font-size: 16px;
+}
+
+#score{
+    /* border: 1px solid yellow; */
+    color: white;
+    font-size: 29pt;
+}
+
+
+
+#set-counter{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 9%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 #nav-panel {
@@ -61,6 +79,7 @@ p{
     /* border: 4px solid red; */
     display: flex;
     flex-direction: row-reverse;
+    justify-content: flex-end;
     align-items: center;
     width: 550px;
 }
@@ -76,7 +95,7 @@ ul {
     justify-content: center;
     align-items: center;
     background-color: white;
-    flex-direction: column;
+    flex-direction: column-reverse;
     width: 25%;
     background-size: contain;
     background-position: center;
@@ -96,12 +115,12 @@ ul {
     height: 1000px;
 }
 
-#button-area{
+#button-area {
     display: flex;
     flex-direction: column;
 }
 
-#shuffle{
+#shuffle {
     width: NaN;
 }
 
@@ -119,15 +138,15 @@ ul {
 
 }
 
-#counter{
-    border: 3px solid green;
+#counter {
+    border: 3px solid rgb(128, 0, 49);
     height: 260px;
     width: 150px;
     position: relative;
     right: 730px;
 }
 
-#rule-space{
+#rule-space {
     /* border: 3px solid yellow; */
     width: 100%;
     display: flex;
@@ -139,7 +158,7 @@ ul {
     overflow: auto;
 }
 
-#score-space{
+#score-space {
     /* border: 3px solid yellow; */
     width: 100%;
     display: flex;
@@ -149,7 +168,7 @@ ul {
     background-size: cover;
 }
 
-#bio-space{
+#bio-space {
     /* border: 3px solid yellow; */
     width: 100%;
     display: flex;
@@ -159,7 +178,7 @@ ul {
     background-size: cover;
 }
 
-.ruleSheets{
+.ruleSheets {
     border: 3px solid #ffde59;
 }
 
@@ -202,41 +221,28 @@ ul {
 .front-face,
 .back-face {
     position: absolute;
-    border-radius: 5px; 
+    border-radius: 5px;
     width: 100%;
     /* backface-visibility: hidden; */
 }
 
 .back-face {
-    transform: rotateY(180deg); 
+    transform: rotateY(180deg);
 }
 
 #row2 {
     /* border: 3px solid rgb(63, 209, 50); */
     display: flex;
-    justify-content: space-around;
+    /* justify-content: flex-end; */
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-end;
     height: 100%;
-    width:50%;
+    width: 70%;
 
 }
 
-/* #row3 {
-    border: 3px solid orange;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    height: 20px;
-    width: 20px;
-
-} */
-
-
 .timecontainer {
     display: flex;
-    justify-content: center;
     align-items: center;
     height: 50px;
     flex-direction: column;
@@ -244,7 +250,7 @@ ul {
 
 #timer {
     margin-bottom: 25px;
-    font-size: 3rem;
+    font-size: 1rem;
     font-weight: bold;
     color: white;
 }
