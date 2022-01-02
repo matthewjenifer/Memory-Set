@@ -65,7 +65,7 @@ function flipCard() {
         hasFlippedCard = true;
         hasFlippedFirstCard = true;
         firstCard = this;
-
+        startTimer()
         console.log({
             hasFlippedCard,
             firstCard
@@ -101,6 +101,7 @@ function flipCard() {
 
 var score = 0;
 var newScore = 0;
+
 document.getElementById('score').innerHTML = "Set Count: " + score;
 
 function checkForSet() {
@@ -111,11 +112,10 @@ function checkForSet() {
         hasFlippedSecondCard = false;
         hasFlippedCard = false;
 
-        if (score >= 0){
-            let newScore = score + 1; 
-            (document.getElementById('score').innerHTML = "Set Count: " + (newScore));
-            console.log('your score is: ' + (newScore))
-        } 
+
+        newScore = score += 1;
+        (document.getElementById('score').innerHTML = "Set Count: " + (newScore));
+        console.log('your score is: ' + (newScore))
 
     } else {
         console.log('Try Again')
@@ -153,9 +153,9 @@ function resetBoard() {
     [firstCard, secondCard, thirdCard, lockBoard] = [null, null, null]
 }
 
-(function shuffle(){
+(function shuffle() {
     cards.forEach(card => {
-        let randomPos = Math.floor(Math.random()* 12);
+        let randomPos = Math.floor(Math.random() * 12);
         card.style.order = randomPos;
     });
 })();
