@@ -47,30 +47,35 @@ startTimer = () => {
 
 //=================================================================================
 
-const cards = document.querySelectorAll('.memory-card');
+const cards = document.querySelectorAll('.memory-card'); // all cards selected as common variable
+cards.forEach(card => card.addEventListener('click', flipCard)) //function flip card should activate every time a card is clicked
 
+let firstCard, secondCard, thirdCard
 let hasFlippedCard = false;
 let hasFlippedSecondCard = false;
 let hasFlippedThirdCard = false;
 let lockBoard = false;
-let firstCard, secondCard, thirdCard
+
+var score = 0;
+var newScore = 0;
+
+document.getElementById('score').innerHTML = "Set Count: " + score; //access set counter with updating score
 
 function flipCard() {
     if (lockBoard) return;
     if (this === firstCard) return;
+
     this.classList.add('flip')
 
     if (!hasFlippedCard) {
         //first click
         hasFlippedCard = true;
-        hasFlippedFirstCard = true;
         firstCard = this;
-        startTimer()
         console.log({
             hasFlippedCard,
             firstCard
         })
-        console.log(this.dataset)
+        console.log(this.dataset) // set group identified
 
     } else if (hasFlippedCard === true && hasFlippedSecondCard !== true) {
         //second click
@@ -84,6 +89,7 @@ function flipCard() {
         console.log(this.dataset)
 
     } else {
+        //third click
         thirdCard = this;
         hasFlippedThirdCard = true;
 
@@ -94,15 +100,9 @@ function flipCard() {
         console.log(this.dataset)
 
         checkForSet();
-
-
     }
 }
 
-var score = 0;
-var newScore = 0;
-
-document.getElementById('score').innerHTML = "Set Count: " + score;
 
 function checkForSet() {
     if (firstCard.dataset.framework === secondCard.dataset.framework && secondCard.dataset.framework === thirdCard.dataset.framework) {
@@ -124,7 +124,6 @@ function checkForSet() {
         hasFlippedSecondCard = false;
         hasFlippedCard = false;
     }
-
 }
 
 function disableCards() {
@@ -133,7 +132,6 @@ function disableCards() {
     thirdCard.removeEventListener('click', flipCard);
 
     resetBoard();
-
 }
 
 function unflipCards() {
@@ -145,19 +143,16 @@ function unflipCards() {
 
         resetBoard();
     }, 1500);
-
 }
 
 function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
-    [firstCard, secondCard, thirdCard, lockBoard] = [null, null, null]
+    [firstCard, secondCard, thirdCard, lockBoard] = [null, null, null, null]
 }
 
-(function shuffle() {
+(function shuffle() { //shuffle cards on board refresh
     cards.forEach(card => {
         let randomPos = Math.floor(Math.random() * 12);
         card.style.order = randomPos;
     });
 })();
-
-cards.forEach(card => card.addEventListener('click', flipCard))

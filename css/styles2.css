@@ -17,6 +17,18 @@ h2 {
     font-size: 16px;
 }
 
+p{
+    color: white;
+    width: 75%;
+}
+
+span{
+    color:rgb(255, 0, 234);
+    font-size: 20pt;
+    font-family: arial;
+}
+
+
 #score {
     /* border: 1px solid yellow; */
     color: white;
@@ -43,7 +55,7 @@ h2 {
 }
 
 #container {
-    /* border: 1px solid red; */
+    /* border: 3px solid red; */
     display: flex;
     height: 80vh;
     width: 100vw;
@@ -90,7 +102,7 @@ ul {
 }
 
 #left-bar {
-    /* border: 3px solid blue; */
+    border: 3px solid blue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,8 +117,23 @@ ul {
 
 }
 
+#left-bar2 {
+    /* border: 3px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    flex-direction: column-reverse;
+    width: 25%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat;
+    background-color: black;
+
+}
+
 #image-panel {
-    /* border: 3px solid green; */
+    border: 3px solid green;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -115,17 +142,16 @@ ul {
     height: 1000px;
 }
 
+#video-box{
+    /* border: 1px solid red; */
+    height: 100%;
+    width: 100%;
+}
+
+
 #button-area {
     display: flex;
     flex-direction: column;
-}
-
-#shuffle {
-    width: NaN;
-}
-
-#dealer {
-    border: 1px solid black;
 }
 
 #card-arena {
@@ -159,16 +185,6 @@ ul {
 }
 
 #score-space {
-    /* border: 3px solid yellow; */
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    background-image: url("../images/SET.png");
-    background-size: cover;
-}
-
-#bio-space {
     /* border: 3px solid yellow; */
     width: 100%;
     display: flex;
@@ -223,7 +239,6 @@ ul {
     position: absolute;
     border-radius: 5px;
     width: 100%;
-    /* backface-visibility: hidden; */
 }
 
 .back-face {
@@ -231,9 +246,8 @@ ul {
 }
 
 #row2 {
-    /* border: 3px solid rgb(63, 209, 50); */
+    border: 3px solid orange;
     display: flex;
-    /* justify-content: flex-end; */
     flex-wrap: wrap;
     align-items: flex-end;
     height: 100%;
@@ -242,6 +256,7 @@ ul {
 }
 
 .timecontainer {
+    border: 1px solid red;
     display: flex;
     align-items: center;
     height: 50px;
@@ -249,6 +264,7 @@ ul {
 }
 
 #timer {
+    border: 1px solid purple;
     margin-bottom: 25px;
     font-size: 3rem;
     font-weight: bold;
