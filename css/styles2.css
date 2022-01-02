@@ -24,6 +24,10 @@ p{
     overflow: auto;
 }
 
+p::-webkit-scrollbar {
+    display: none;
+}
+
 span{
     color:rgb(255, 0, 234);
     font-size: 20pt;
@@ -209,6 +213,10 @@ ul {
     background-image: url("../images/SET.png");
     background-size: cover;
     overflow: auto;
+}
+
+#rule-space::-webkit-scrollbar {
+    display: none;
 }
 
 #score-space {
