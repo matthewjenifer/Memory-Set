@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles2.css">
-    <title>Set (Online) | Classic Card Game </title>
+    <title>MEMORY Set | Classic Card Game </title>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
         <div id="nav-div">
 
             <div id="chess_img">
-                <img src="images/chess.png" width="300px" ; height="100px">
+                <a href="/index.html"><img src="images/chess.png" width="300px" ; height="100px"></a>
             </div>
 
             <nav id="true-nav">
@@ -42,16 +42,37 @@
 
         <div id="left-bar">
 
-            <h2>Click TOP Corner logo to Shuffle.</h2>
+            <h2>Click CORNER logo to Shuffle deck.</h2>
 
             <br>
             <div id="image-panel">
+
+                <div id="form-space">
+                    
+                    <form>
+                        <br>
+                        <input 
+                        type="text" 
+                        name="username" 
+                        id="username" 
+                        placeholder="username"
+                        />
+                        <br>
+                        <br>
+                        <button
+                        type="submit"
+                        id="saveScore"
+                        onclick="saveHighScore(event)"
+                        disabled
+                        >Save Score</button>
+                    </form>
+                </div>
 
                 <br>
                 <div class="timecontainer">
 
                     <div id="timer">00:00</div>
-                    <button onclick="startTimer()">Round Timer</button>
+                    <!-- <button onclick="startTimer()">Start Timer</button> -->
 
                 </div>
 

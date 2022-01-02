@@ -1,3 +1,31 @@
+const username = document.getElementById('username');
+const saveScorebtn = document.getElementById('saveScore');
+const finalScore = document.getElementById('finalScore');
+const mostRecentScore = localStorage.getItem('mostRecentScore');
+
+const highScores =JSON.parse(localStorage.getItem('highScores')) || [];
+console.log(highScores);
+
+username.addEventListener('keyup', ()=>{
+    console.log(username.value);
+    saveScore.disabled = !username.value;
+})
+
+saveHighScore = (e) =>{
+    console.log('you clicked the save button');
+    e.preventDefault();
+
+    const score2 = {
+        score: mostRecentScore,
+        name: username.value
+    };
+    highScores.push(score2)
+    console.log(highScores)
+};
+
+
+//=================================================
+
 const timer = document.getElementById("timer");
 let timerInterval;
 
@@ -45,7 +73,7 @@ startTimer = () => {
     }, 1000);
 };
 
-//=================================================================================
+//=========================================
 
 const cards = document.querySelectorAll('.memory-card'); // all cards selected as common variable
 cards.forEach(card => card.addEventListener('click', flipCard)) //function flip card should activate every time a card is clicked
@@ -59,7 +87,7 @@ let lockBoard = false;
 var score = 0;
 var newScore = 0;
 
-document.getElementById('score').innerHTML = "Set Count: " + score; //access set counter with updating score
+document.getElementById('score').innerHTML = "Set Count : " + score; //access set counter with updating score
 
 function flipCard() {
     if (lockBoard) return;
@@ -114,8 +142,10 @@ function checkForSet() {
 
 
         newScore = score += 1;
-        (document.getElementById('score').innerHTML = "Set Count: " + (newScore));
+        (document.getElementById('score').innerHTML = "Set Count : " + (newScore));
         console.log('your score is: ' + (newScore))
+
+        localStorage.setItem('mostRecentScore', newScore);
 
     } else {
         console.log('Try Again')
@@ -156,3 +186,15 @@ function resetBoard() {
         card.style.order = randomPos;
     });
 })();
+
+
+//============================
+
+// const ruleSpread = document.querySelectorAll('.ruleIMG')
+// const IMG = document.querySelector('ruleSheets')
+
+// const toggleFullScreen = () => {
+//     IMG.requestFullscreen()
+// }
+
+// ruleSpread.addEventListener('click', toggleFullScreen)
