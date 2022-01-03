@@ -48,31 +48,22 @@
             <div id="image-panel">
 
                 <div id="form-space">
-                    
+
                     <form>
                         <br>
-                        <input 
-                        type="text" 
-                        name="username" 
-                        id="username" 
-                        placeholder="username"
-                        />
+                        <input type="text" name="username" id="username" placeholder="username" />
                         <br>
                         <br>
-                        <button
-                        type="submit"
-                        id="saveScore"
-                        onclick="saveHighScore(event)"
-                        disabled
-                        >Save Score</button>
+                        <button type="submit" id="saveScore" onclick="saveHighScore(event)" disabled>Save Score</button>
                     </form>
                 </div>
 
                 <br>
                 <div class="timecontainer">
 
-                    <div id="timer">00:00</div>
-                    <!-- <button onclick="startTimer()">Start Timer</button> -->
+                    <div id="timer">
+                        <div id="time">60</div>sec
+                    </div>
 
                 </div>
 
