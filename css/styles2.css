@@ -55,9 +55,10 @@ input {
 .highScores{
     display: flex;
     justify-content: center;
-    background-color: grey;
+    background-color: rgba(0, 0, 0, 0.76);
+    border: 3px solid black;
     height: 70vh;
-    width: 50vw;
+    width: 70vw;
 }
 
 #highScoresList {
