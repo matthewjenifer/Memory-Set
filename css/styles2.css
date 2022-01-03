@@ -3,7 +3,7 @@
 
 } */
 
-#time{
+#time {
     font-size: 60px;
 }
 
@@ -14,9 +14,10 @@ body {
     height: 100%;
     display: flex;
     flex-wrap: wrap;
-    background-image: url("/images/joshua-hoehne-Sr-aIjkgMpE-unsplash.jpg");
+    background-color: black;
     background-size: cover;
     background-repeat: no-repeat;
+    justify-content: center;
 }
 
 h2 {
@@ -51,7 +52,32 @@ input {
     font-size: 29pt;
 }
 
+.highScores{
+    display: flex;
+    justify-content: center;
+    background-color: grey;
+    height: 70vh;
+    width: 50vw;
+}
 
+#highScoresList {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 4rem;
+}
+
+.high-score{
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem
+}
+
+.high-score:hover {
+    transform: scale(1.025);
+}
+
+#finalScore{
+    color: white;
+}
 
 #set-counter {
     /* border: 1px solid red; */
@@ -73,7 +99,7 @@ input {
 #container {
     border: 4px solid black;
     display: flex;
-    height: 90vh;
+    height: 76vh;
     width: 100vw;
 }
 
@@ -162,7 +188,7 @@ ul {
     justify-content: center;
     border: 2px solid skyblue;
     height: 70%;
-    width: 100%;
+    width: 99%;
 }
 
 
@@ -229,7 +255,7 @@ ul {
 }
 
 .ruleSheets {
-    /* border: 3px solid #ffde59; */
+    border: 3px solid transparent;
 }
 
 
