@@ -3,15 +3,15 @@ const saveScorebtn = document.getElementById('saveScore');
 const finalScore = document.getElementById('finalScore');
 const mostRecentScore = localStorage.getItem('mostRecentScore');
 
-const highScores =JSON.parse(localStorage.getItem('highScores')) || [];
+const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 console.log(highScores);
 
-username.addEventListener('keyup', ()=>{
+username.addEventListener('keyup', () => {
     console.log(username.value);
     saveScore.disabled = !username.value;
 })
 
-saveHighScore = (e) =>{
+saveHighScore = (e) => {
     console.log('you clicked the save button');
     e.preventDefault();
 
@@ -26,52 +26,20 @@ saveHighScore = (e) =>{
 
 //=================================================
 
-const timer = document.getElementById("timer");
-let timerInterval;
-
-startTimer = () => {
-    // Firs twe start by clearing the existing timer, in case of a restart
-    clearInterval(timerInterval);
-    // Then we clear the variables
-    let second = 0,
-        minute = 0,
-        hour = 0,
-        odd = false;
-
-    // Next we set a interval every 1000 ms
-    timerInterval = setInterval(function () {
-        // check if we are odd or even and append class to timer
-        odd = !odd;
-        if (odd) {
-            timer.classList.add("odd");
-        } else {
-            timer.classList.remove("odd");
-        }
-
-        // We set the timer text to include a two digit representation
-        timer.innerHTML =
-            (hour ? hour + ":" : "") +
-            (minute < 10 ? "0" + minute : minute) +
-            ":" +
-            (second < 10 ? "0" + second : second);
-
-        // Next we add a new second since one second is passed
-        second++;
-
-        // We check if the second equals 60 "one minute"
-        if (second == 60) {
-            // If so, we add a minute and reset our seconds to 0
-            minute++;
-            second = 0;
-        }
-
-        // If we hit 60 minutes "one hour" we reset the minutes and plus an hour
-        if (minute == 60) {
-            hour++;
-            minute = 0;
-        }
-    }, 1000);
-};
+var counter = 60;
+var interval = setInterval(function () {
+    counter--;
+    // Display 'counter' wherever you want to display it.
+    if (counter <= 0) {
+        clearInterval(interval);
+        $('#timer').html("<h3>Save Your Score Below!</h3>");
+        alert("Times Up!!! How many SETS did you find?")
+        return;
+    } else {
+        $('#time').text(counter);
+        // console.log("Timer --> " + counter);
+    }
+}, 1000);
 
 //=========================================
 
@@ -186,5 +154,3 @@ function resetBoard() {
         card.style.order = randomPos;
     });
 })();
-
-

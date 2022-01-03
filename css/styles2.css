@@ -4,7 +4,7 @@
 } */
 
 #time {
-    font-size: 60px;
+    font-size: 130px;
 }
 
 body {
@@ -187,8 +187,8 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid skyblue;
-    height: 70%;
+    /* border: 2px solid skyblue; */
+    height: 90%;
     width: 99%;
 }
 
