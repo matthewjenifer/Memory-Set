@@ -5,7 +5,7 @@ Per Scholas SE-26 - Mod 1(Final): Game Project - an updated twist on a combinati
   
 <a href=""><img style="height: 15%" src="/images/hidden_diamond_card set_ccexpress.png"></a>
 <hr>
-<h2 style="text-align: center">Click The Image To Play</h2>
+<h2 style="text-align: center">Click The Image Above To Play</h2>
 <h6>Version 1.0.0</h6>
 
 <h2>What's SET?</h2>
@@ -32,7 +32,7 @@ Next I added a 60 second timer and a way to log the users attempt. </p>
 
 <h4>How to Win the Game</h4>
 
-<p>Upon loading the game page a 60 second countdown begins. Your task is to find all four possible SETS BEFORE the clock stops you..easy enough...if your MEMORY is sharp that is... </p>
+<p>Upon loading the game page a 60 second countdown begins. Your task is to find all four possible SETS before the clock stops you..easy enough...if your MEMORY is sharp that is... </p>
 
 <h4>Technologies Used</h4>
 <ul>
@@ -55,7 +55,7 @@ Next I added a 60 second timer and a way to log the users attempt. </p>
 "> 60 second countdown Jquery </a> Code Playground.
   </li>
   <li>
-    w3schools: <a href="https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp">HOW TO hide the Scrollbar </a>.
+    W3Schools: <a href="https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp">HOW TO hide the Scrollbar </a>.
   </li>
 
 

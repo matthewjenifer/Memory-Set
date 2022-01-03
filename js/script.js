@@ -37,7 +37,6 @@ var interval = setInterval(function () {
         return;
     } else {
         $('#time').text(counter);
-        // console.log("Timer --> " + counter);
     }
 }, 1000);
 

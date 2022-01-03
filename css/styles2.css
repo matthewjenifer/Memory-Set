@@ -3,9 +3,6 @@
 
 } */
 
-#time {
-    font-size: 130px;
-}
 
 body {
     margin: 0;
@@ -20,10 +17,21 @@ body {
     justify-content: center;
 }
 
+#container {
+    border: 4px solid black;
+    display: flex;
+    height: 76vh;
+    width: 100vw;
+}
+
 h2 {
     color: white;
     font-size: 12px;
     padding: 1rem;
+}
+
+input {
+    width: 80%;
 }
 
 p {
@@ -42,17 +50,20 @@ span {
     font-family: arial;
 }
 
-input {
-    width: 80%;
+ul {
+    display: inline-flex;
+    padding-right: 50px;
 }
 
-#score {
-    /* border: 1px solid yellow; */
+
+/* SCORING */
+
+
+#finalScore {
     color: white;
-    font-size: 29pt;
 }
 
-.highScores{
+.highScores {
     display: flex;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.76);
@@ -67,7 +78,7 @@ input {
     margin-bottom: 4rem;
 }
 
-.high-score{
+.high-score {
     font-size: 2.8rem;
     margin-bottom: 0.5rem
 }
@@ -76,8 +87,10 @@ input {
     transform: scale(1.025);
 }
 
-#finalScore{
+#score {
+    /* border: 1px solid yellow; */
     color: white;
+    font-size: 29pt;
 }
 
 #set-counter {
@@ -89,21 +102,13 @@ input {
     align-items: flex-end;
 }
 
-#nav-panel {
-    display: flex;
-    border: 3px solid black;
-    background-color: white;
-    height: 100%;
-    width: 99.5%;
-}
+/* NAVIGATION */
 
-#container {
-    border: 4px solid black;
+#chess_img {
     display: flex;
-    height: 76vh;
-    width: 100vw;
+    flex-direction: row;
+    align-items: flex-end;
 }
-
 
 #logo {
     /* border: 3px solid brown; */
@@ -117,17 +122,19 @@ input {
     transition: 1s ease;
 }
 
-#chess_img {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-}
-
 #nav-div {
     /* border: 4px solid purple; */
     display: flex;
     justify-content: space-between;
     width: 100%;
+}
+
+#nav-panel {
+    display: flex;
+    border: 3px solid black;
+    background-color: white;
+    height: 100%;
+    width: 99.5%;
 }
 
 #true-nav {
@@ -138,24 +145,37 @@ input {
     align-items: center;
 }
 
-ul {
-    display: inline-flex;
-    padding-right: 50px;
+/* SIDE-BAR */
+
+button {
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    padding: .5rem .7rem;
+    margin: 0;
+    text-decoration: none;
+    background: grey;
+    color: #ffffff;
+    font-family: sans-serif;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out;
+    height: 46px;
 }
 
-#left-bar {
-    /* border: 3px solid blue; */
+#button-area {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    flex-direction: column-reverse;
-    width: 25%;
-    background-size: contain;
-    background-position: center;
-    background-repeat: repeat;
-    background-color: black;
+    flex-direction: column;
+}
 
+
+#form-space {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid skyblue; */
+    height: 90%;
+    width: 99%;
 }
 
 #left-bar2 {
@@ -173,34 +193,49 @@ ul {
 
 }
 
-#image-panel {
-    /* border: 3px solid green; */
+#left-bar {
+    /* border: 3px solid blue; */
     display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 80%;
-}
-
-#form-space {
-    display: flex;
-    align-items: center;
     justify-content: center;
-    /* border: 2px solid skyblue; */
-    height: 90%;
-    width: 99%;
+    align-items: center;
+    background-color: white;
+    flex-direction: column-reverse;
+    width: 25%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat;
+    background-color: black;
+
 }
 
+#logo-black {
+    border: 1px solid;
+}
 
+#time {
+    font-size: 130px;
+}
 
-#image-panel2 {
-    /* border: 3px solid green; */
+.timecontainer {
+    /* border: 1px solid red; */
     display: flex;
-    flex-direction: column;
     align-items: center;
-    width: 100%;
-    height: 70%;
+    height: 50px;
+    flex-direction: column;
+}
+
+#timer {
+    /* border: 1px solid purple; */
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+}
+
+#trophy-image {
+    height: 20vh;
 }
 
 #video-box {
@@ -210,14 +245,9 @@ ul {
     margin-top: 25px;
 }
 
-#logo-black {
-    border: 1px solid;
-}
 
-#button-area {
-    display: flex;
-    flex-direction: column;
-}
+/* PLAY SPACE */
+
 
 #card-arena {
     border: 3px solid black;
@@ -229,36 +259,38 @@ ul {
 
 }
 
+.gallery {
+    margin: 10px 50px;
+}
 
-#rule-space {
-    border: 3px solid black;
+.gallery img {
+    transition: 1s;
+    padding: 15px;
+    width: 800px;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+#image-panel {
+    /* border: 3px solid green; */
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
+    height: 80%;
+}
+
+#image-panel2 {
+    /* border: 3px solid green; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("../images/SET.png");
-    background-size: cover;
-    overflow: auto;
-}
-
-#rule-space::-webkit-scrollbar {
-    display: none;
-}
-
-#score-space {
-    /* border: 3px solid yellow; */
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    background-image: url("../images/SET.png");
-    background-size: cover;
+    height: 70%;
 }
-
-.ruleSheets {
-    border: 3px solid transparent;
-}
-
 
 
 #memory-game {
@@ -306,6 +338,36 @@ ul {
     transform: rotateY(180deg);
 }
 
+#rule-space {
+    border: 3px solid black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../images/SET.png");
+    background-size: cover;
+    overflow: auto;
+}
+
+.ruleSheets {
+    border: 3px solid transparent;
+}
+
+
+#rule-space::-webkit-scrollbar {
+    display: none;
+}
+
+#score-space {
+    /* border: 3px solid yellow; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: url("../images/SET.png");
+    background-size: cover;
+}
+
 #row2 {
     /* border: 3px solid orange; */
     display: flex;
@@ -314,56 +376,4 @@ ul {
     height: 100%;
     width: 70%;
 
-}
-
-.timecontainer {
-    /* border: 1px solid red; */
-    display: flex;
-    align-items: center;
-    height: 50px;
-    flex-direction: column;
-}
-
-#timer {
-    /* border: 1px solid purple; */
-    margin-bottom: 25px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
-    display: flex;
-    align-items: flex-end;
-}
-
-button {
-    border-radius: 5px;
-    display: inline-block;
-    border: none;
-    padding: .5rem .7rem;
-    margin: 0;
-    text-decoration: none;
-    background: grey;
-    color: #ffffff;
-    font-family: sans-serif;
-    cursor: pointer;
-    text-align: center;
-    transition: background 250ms ease-in-out;
-    height: 46px;
-}
-
-#trophy-image {
-    height: 20vh;
-}
-
-.gallery {
-    margin: 10px 50px;
-}
-
-.gallery img {
-    transition: 1s;
-    padding: 15px;
-    width: 800px;
-}
-
-.gallery img:hover {
-    transform: scale(1.1);
 }
