@@ -3,7 +3,7 @@ Per Scholas SE-26 - Mod 1(Final): Game Project - an updated twist on a combinati
 
 
   
-<a href=""><img style="height: 25%" src="/images/hidden_diamond_card set_ccexpress.png"></a>
+<a href=""><img style="height: 15%" src="/images/hidden_diamond_card set_ccexpress.png"></a>
 <hr>
 <h2 style="text-align: center">Click The Image To Play</h2>
 <h6>Version 1.0.0</h6>
