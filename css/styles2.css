@@ -32,6 +32,10 @@ h2 {
 
 input {
     width: 80%;
+    border: none;
+    font-size: 1.1rem;
+    padding: .6rem;
+    box-shadow: 0 0.1rem 1.4rem 0 rgba(86,185,235,0.5)
 }
 
 p {
@@ -338,6 +342,16 @@ button {
     transform: rotateY(180deg);
 }
 
+#row2 {
+    /* border: 3px solid orange; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    height: 100%;
+    width: 70%;
+
+}
+
 #rule-space {
     border: 3px solid black;
     width: 100%;
@@ -366,14 +380,4 @@ button {
     justify-content: space-evenly;
     background-image: url("../images/SET.png");
     background-size: cover;
-}
-
-#row2 {
-    /* border: 3px solid orange; */
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    height: 100%;
-    width: 70%;
-
 }

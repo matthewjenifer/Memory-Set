@@ -1,8 +1,6 @@
 # Memory-Set
 Per Scholas SE-26 - Mod 1(Final): Game Project - an updated twist on a combination classic
 
-
-  
 <a href=""><img style="height: 15%" src="/images/hidden_diamond_card set_ccexpress.png"></a>
 <hr>
 <h2 style="text-align: center">Click The Image Above To Play</h2>
@@ -42,7 +40,7 @@ Next I added a 60 second timer and a way to log the users attempt. </p>
 </ul>
 
 <hr>
-<h3>Listed Below Are All Assets/Resources/Tutorials I Used For The Project</h3>
+<h3>Tutorials Used For The Project</h3>
 <ul>
   <li>
     Youtube: <a href="https://www.youtube.com/watch?v=ZniVgo8U7ek
@@ -57,6 +55,5 @@ Next I added a 60 second timer and a way to log the users attempt. </p>
   <li>
     W3Schools: <a href="https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp">HOW TO hide the Scrollbar </a>.
   </li>
-
 
 </ul>

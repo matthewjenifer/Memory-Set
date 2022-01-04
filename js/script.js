@@ -7,12 +7,10 @@ const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 console.log(highScores);
 
 username.addEventListener('keyup', () => {
-    console.log(username.value);
     saveScore.disabled = !username.value;
 })
 
 saveHighScore = (e) => {
-    console.log('you clicked the save button');
     e.preventDefault();
 
     const score2 = {
@@ -34,6 +32,7 @@ var interval = setInterval(function () {
         clearInterval(interval);
         $('#timer').html("<h3>Save Your Score Below!</h3>");
         alert("Times Up!!! How many SETS did you find?")
+        localStorage.setItem("mostRecentScore", score);
         return;
     } else {
         $('#time').text(counter);
