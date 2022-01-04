@@ -1,7 +1,7 @@
 # Memory-Set
 Per Scholas SE-26 - Mod 1(Final): Game Project - an updated twist on a combination classic
 
-<a href=""><img style="height: 15%" src="/images/hidden_diamond_card set_ccexpress.png"></a>
+<a href="https://silly-varahamihira-74f48b.netlify.app/index.html"><img style="height: 15%" src="/images/hidden_diamond_card set_ccexpress.png"></a>
 <hr>
 <h2 style="text-align: center">Click The Image Above To Play</h2>
 <h6>Version 1.0.0</h6>
