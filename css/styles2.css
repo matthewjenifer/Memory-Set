@@ -288,7 +288,7 @@ button {
 }
 
 #image-panel2 {
-    /* border: 3px solid green; */
+    border: 3px solid green;
     display: flex;
     flex-direction: column;
     align-items: center;
